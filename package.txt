@@ -1,0 +1,9 @@
+[1]install flask, sqlalchemy
+
+pip install flask
+pip install sqlalchemy
+
+apt-get install python-mysqldb
+
+
+pip install MySQL-python
