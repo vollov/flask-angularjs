@@ -2,7 +2,7 @@
 
 pip install flask
 pip install sqlalchemy
-
+pip install pyyaml
 apt-get install python-mysqldb
 
 

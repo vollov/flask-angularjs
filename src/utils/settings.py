@@ -1,11 +1,18 @@
 # -*- coding: utf-8 -*-
 
-import ast
+import ast, os, ConfigParser
 
 class Configuration:
     
-    def __init__(self, config):
-        self.config = config
+    def __init__(self, mode):
+        """
+        mode = test | prod
+        """
+        current_directory = os.path.dirname(os.path.abspath(__file__))
+        etc_directory = os.path.join(current_directory, '../etc')
+        ini_file_path = os.path.join(etc_directory, mode + '_settings.ini')
+        self.config = ConfigParser.ConfigParser()
+        self.config.read(ini_file_path)
 
     def getOptions(self, section):
         return self.config.options(section)

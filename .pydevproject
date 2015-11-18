@@ -6,4 +6,8 @@
 <path>/${PROJECT_DIR_NAME}/src</path>
 <path>/${PROJECT_DIR_NAME}/test</path>
 </pydev_pathproperty>
+<pydev_pathproperty name="org.python.pydev.PROJECT_EXTERNAL_SOURCE_PATH">
+<path>C:\dev\env\doonvalley\Lib\site-packages</path>
+<path>C:\opt\Python27\Lib</path>
+</pydev_pathproperty>
 </pydev_project>
