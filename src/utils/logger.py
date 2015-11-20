@@ -1,5 +1,9 @@
 # -*- coding: utf-8 -*-
 
+"""
+This class is obsolet
+"""
+
 import os,  yaml, logging
 from logging import config
 
