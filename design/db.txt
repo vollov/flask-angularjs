@@ -1,1 +1,20 @@
 SHOW CREATE TABLE sales_customer;
+
+
+ORM
+
+
+#fetch everything
+lBooks = DBSession.query(Book)  #returns a Query object. 
+for oBook in lBooks:
+    print oBook.name
+
+#simple filters
+lBooks = DBSession.query(Book).filter_by(author_id=1) #returns all the books for a specific author
+
+#more complex filters
+lBooks = DBSession.query(Book).filter(Book.price<20) #returns all the books with price <20. Note we use filter, not filter_by
+
+#filters can be combined
+lBooks = DBSession.query(Book).filter_by(author_id=1).filter(Book.price<20) #all books by a specific author, with price<20
+

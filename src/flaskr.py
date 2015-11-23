@@ -17,6 +17,12 @@ logging.config.dictConfig(app_settings.LOGGING)
 
 logger = logging.getLogger(__name__)
 
+from dao.database import Session
+
+@app.teardown_request
+def shutdown_session(exception=None):
+    Session.remove()
+        
 if __name__ == '__main__':
     print app.config['SECRET_KEY']
     print app.config['DEBUG']

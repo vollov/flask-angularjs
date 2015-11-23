@@ -13,6 +13,12 @@ if UNIX:
 else:
     RESOURCE_ROOT='c:/opt/var/www/jennyli/'
     
+if DEBUG:
+    PRESERVE_CONTEXT_ON_EXCEPTION=True
+else:
+    PRESERVE_CONTEXT_ON_EXCEPTION=False
+    
+DATABASE_URL = 'mysql://root:justdoit@localhost/flaskr_test'
     
 LOGGING = {
     'version': 1,
